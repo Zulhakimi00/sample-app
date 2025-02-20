@@ -1,5 +1,5 @@
 class ApiSetting {
-  final String baseUrl = 'https://st-buyback.sankyutech.com/api/';
+  final String baseUrl = 'https://dummyjson.com/';
 
   setHeaders() => {
         'Content-type': 'application/json;charset=UTF-8',

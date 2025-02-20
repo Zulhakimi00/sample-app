@@ -33,3 +33,7 @@ const yellow50 = Color(0xFFFEFDE6);
 const yellow100 = Color(0xFFFFD966);
 const yellowIcon = Color(0xFFFFC300);
 const yellowPercent100 = Color(0xFFDCA900);
+
+const primaryColor = Color(0xFF4280EF);
+const secondaryColor = Color(0xFF3F72AF);
+const accentColor = Color(0xFF3F72AF);

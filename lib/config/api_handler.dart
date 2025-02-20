@@ -33,7 +33,6 @@ class ApiHandler {
         response = await ApiService()
             .fetchAddImageUsingPost(fullUrl, body, uploadImage);
         break;
-      default:
     }
 
     return response;

@@ -1,4 +1,5 @@
 import 'core/export.dart';
+import 'route/route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           brightness: Brightness.light,
         ),
-        // home: const SplashScreen(),
+        initialRoute: AppRoutes.splash,
+        getPages: AppRoutes.routes,
       );
     });
   }
