@@ -1,8 +1,6 @@
+import 'package:sample_flutter/controller/theme_controller.dart';
 import 'package:sample_flutter/core/export.dart';
 import 'package:sample_flutter/module/auth/controller/login_controller.dart';
-import 'package:sample_flutter/service/color.dart';
-import 'package:sample_flutter/service/spacer.dart';
-import 'package:sample_flutter/widget/button.dart';
 import 'package:sample_flutter/widget/input.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,6 +8,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeController themeController = Get.find();
     return Scaffold(
       body: GetBuilder<LoginController>(
         init: LoginController(),
@@ -21,17 +20,17 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  const Text(
-                    'Sign in',
+                  Text(
+                    'sign_in'.tr,
                     style: TextStyle(
                         fontSize: 42,
                         fontWeight: FontWeight.bold,
-                        color: primaryColor),
+                        color: Theme.of(context).primaryColor),
                   ),
                   const HeightPrimarySpacer(),
-                  const Text(
-                    'Please log in into your account',
-                    style: TextStyle(
+                  Text(
+                    'login_message'.tr,
+                    style: const TextStyle(
                       fontSize: 16,
                     ),
                   ),
@@ -45,7 +44,8 @@ class LoginScreen extends StatelessWidget {
                       isLoading: ctrl.isLoading.value,
                       title: 'Sign in',
                       onPressed: () {
-                        ctrl.login();
+                        // ctrl.login();
+                        themeController.toggleTheme();
                       })
                 ],
               ),

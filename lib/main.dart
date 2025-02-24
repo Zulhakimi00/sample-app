@@ -1,5 +1,8 @@
+import 'package:sample_flutter/controller/theme_controller.dart';
+import 'package:sample_flutter/lang/translations.dart';
+import 'package:sample_flutter/theme/theme.dart';
+
 import 'core/export.dart';
-import 'route/route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +17,12 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, screenType) {
       return GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        translations: AppTranslation(), // Import translation
+        locale: const Locale('en', 'US'), // Default language
         title: 'Flutter Demo',
-        theme: ThemeData(
-          useMaterial3: false,
-          brightness: Brightness.light,
-        ),
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        themeMode: Get.find<ThemeController>().themeMode,
         initialRoute: AppRoutes.splash,
         getPages: AppRoutes.routes,
       );

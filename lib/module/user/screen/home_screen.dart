@@ -57,11 +57,11 @@ class UserHome extends StatelessWidget {
                               Container(
                                 padding:
                                     const EdgeInsets.only(left: 8, right: 8),
-                                child: const Row(
+                                child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
+                                    const Text(
                                       'Last Transaction',
                                       style: TextStyle(fontSize: 24),
                                     ),

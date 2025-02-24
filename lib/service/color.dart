@@ -1,5 +1,7 @@
+import 'package:sample_flutter/controller/theme_controller.dart';
 import 'package:sample_flutter/core/export.dart';
 
+final ThemeController themeController = Get.find();
 const mainColour = Color(0xFF112D4E);
 const secondaryColour = Color(0xFF3F72AF);
 const altColour1 = Color(0xFFDBE2EF);
